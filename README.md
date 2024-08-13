@@ -40,7 +40,8 @@ Your task is to create a timeline component using TLDraw, similar to the one fou
 
 ## Submission
 
-Please clone this repository and submit your implementation via email. Include a brief description of your approach and any challenges you faced.
+Please create a private repo for your submission to avoid leaking the solution. Add our emails (krishna@getalai.com and anmol@getalai.com) when you're ready for review.
+Include a brief description of your approach and any challenges you faced.
 
 ## Resources
 
