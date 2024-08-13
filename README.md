@@ -40,7 +40,7 @@ Your task is to create a timeline component using TLDraw, similar to the one fou
 
 ## Submission
 
-Please fork this repository and submit a pull request with your implementation. Include a brief description of your approach and any challenges you faced.
+Please clone this repository and submit your implementation via email. Include a brief description of your approach and any challenges you faced.
 
 ## Resources
 
