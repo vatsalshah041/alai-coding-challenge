@@ -64,70 +64,70 @@ export default function TldrawComponent() {
   //     "event": "Incorporate feedback from the beta release and finalize the feature for public launch. Launch the new social sharing feature to all users, accompanied by a marketing campaign highlighting its benefits and functionalities."
   //   }
   // ]
-  // const timedata = [
-  //   {
-  //     "id": 1,
-  //     "date": "2024-04-10",
-  //     "eventHeading": "User Research ",
-  //     "eventDesc": "Finalize user research highlighting the need for a social feature that allows users to share their health achievements with friends within the app."
-  //   },
-  //   {
-  //     "id": 2,
-  //     "date": "2024-05-05",
-  //     "eventHeading": "Design and Prototyping",
-  //     "eventDesc": "Design user interfaces for the social sharing feature, focusing on ease of use and integration with existing app functionalities."
-  //   },
-  //   {
-  //     "id": 3,
-  //     "date": "2024-06-01",
-  //     "eventHeading": "Development starts",
-  //     "eventDesc": "Start development, prioritizing core functionalities such as posting updates, friend interactions, and privacy settings."
-  //   },
-  //   {
-  //     "id": 4,
-  //     "date": "2024-07-25",
-  //     "eventHeading": "Internal Testing ",
-  //     "eventDesc": "Begin internal testing to identify bugs and usability issues. Iterate on the feature based on feedback, refining the UI/UX and ensuring seamless integration with the app's existing features."
-  //   },
-  //   {
-  //     "id": 5,
-  //     "date": "2024-08-20",
-  //     "eventHeading": "Beta Release ",
-  //     "eventDesc": "Release the feature to beta testers, a select group of existing users who have opted in for early access."
-  //   },
-  //   {
-  //     "id": 6,
-  //     "date": "2024-09-30",
-  //     "eventHeading": "Public Launch",
-  //     "eventDesc": "Incorporate feedback from the beta release and finalize the feature for public launch."
-  //   }
-  // ];
   const timedata = [
     {
-      id: 1,
-      date: "10th August",
-      event_name: "Product Development Commences",
-      event_desc: "Product development begins.",
+      "id": 1,
+      "date": "2024-04-10",
+      "event_name": "User Research ",
+      "eventDesc": "Finalize user research highlighting the need for a social feature that allows users to share their health achievements with friends within the app."
     },
     {
-      id: 2,
-      date: "10th September",
-      event_name: "Product Development Ends",
-      event_desc: "Product development phase concludes.",
+      "id": 2,
+      "date": "2024-05-05",
+      "event_name": "Design and Prototyping",
+      "eventDesc": "Design user interfaces for the social sharing feature, focusing on ease of use and integration with existing app functionalities."
     },
     {
-      id: 3,
-      date: "15th September",
-      event_name: "Marketing Begins",
-      event_desc: "Marketing efforts kick off.",
+      "id": 3,
+      "date": "2024-06-01",
+      "event_name": "Development starts",
+      "eventDesc": "Start development, prioritizing core functionalities such as posting updates, friend interactions, and privacy settings."
     },
     {
-      id: 4,
-      date: "30th September",
-      event_name: "Product Launch",
-      event_desc: "The product is officially launched to the public.",
+      "id": 4,
+      "date": "2024-07-25",
+      "event_name": "Internal Testing ",
+      "eventDesc": "Begin internal testing to identify bugs and usability issues. Iterate on the feature based on feedback, refining the UI/UX and ensuring seamless integration with the app's existing features."
     },
+    {
+      "id": 5,
+      "date": "2024-08-20",
+      "event_name": "Beta Release ",
+      "eventDesc": "Release the feature to beta testers, a select group of existing users who have opted in for early access."
+    },
+    {
+      "id": 6,
+      "date": "2024-09-30",
+      "event_name": "Public Launch",
+      "eventDesc": "Incorporate feedback from the beta release and finalize the feature for public launch."
+    }
   ];
+  // const timedata = [
+  //   {
+  //     id: 1,
+  //     date: "10th August",
+  //     event_name: "Product Development Commences",
+  //     event_desc: "Product development begins.",
+  //   },
+  //   {
+  //     id: 2,
+  //     date: "10th September",
+  //     event_name: "Product Development Ends",
+  //     event_desc: "Product development phase concludes.",
+  //   },
+  //   {
+  //     id: 3,
+  //     date: "15th September",
+  //     event_name: "Marketing Begins",
+  //     event_desc: "Marketing efforts kick off.",
+  //   },
+  //   {
+  //     id: 4,
+  //     date: "30th September",
+  //     event_name: "Product Launch",
+  //     event_desc: "The product is officially launched to the public.",
+  //   },
+  // ];
 
   return (
     <div style={{ position: "fixed", width: "250vh", height: "90vh" }}>
@@ -143,12 +143,12 @@ export default function TldrawComponent() {
            
             
             props: {
-              color:"red",
+              color:"black",
               size:"xl",
               spline:'line',
               points: {
                 "start": { id:defaultLineId,index:'a1',x: 150, y: 270 },
-                "end": { id:defaultLineId,index:'a2',x: (timedata.length-1)*400+200, y: 270 }
+                "end": { id:defaultLineId,index:'a2',x: (timedata.length-1)*400+150, y: 270 }
               }
             },
           });
