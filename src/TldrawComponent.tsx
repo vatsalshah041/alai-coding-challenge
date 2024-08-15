@@ -137,21 +137,36 @@ export default function TldrawComponent() {
           const helloWorldShapeId = createShapeId();
           console.log(helloWorldShapeId);
           const defaultLineId = createShapeId();
-          // editor.createShape({
-          //   id: defaultLineId,
-          //   type: 'line',
-          //   points: [
-          //     { x: 50, y: 50 }, // Start point
-          //     { x: 250, y: 50 } // End point
-          //   ],
-          //   props: {
-          //     stroke: 'black', // Line color
-          //     strokeWidth: 2, // Line thickness
-          //   },
-          // });
-
+          editor.createShape({
+            id: defaultLineId,
+            type: 'line',
+           
+            
+            props: {
+              color:"red",
+              size:"xl",
+              spline:'line',
+              points: {
+                "start": { id:defaultLineId,index:'a1',x: 150, y: 270 },
+                "end": { id:defaultLineId,index:'a2',x: (timedata.length-1)*400+200, y: 270 }
+              }
+            },
+          });
+          
           let ctr = 0;
           timedata.forEach((data, index) => {
+            editor.createShape({
+              id: createShapeId(),
+              type: 'line',
+              x: 150+index*400, // X coordinate of the start point
+              y: 270, 
+              props: {
+                color:"red",
+                size:"xl",
+                
+                
+              },
+            });
             if (ctr % 2 == 0) {
               editor.createShape({
                 id: createShapeId(),
