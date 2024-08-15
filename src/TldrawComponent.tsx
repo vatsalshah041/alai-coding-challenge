@@ -31,12 +31,16 @@ const submitinput=()=>{
       
       let result = await model.generateContent(prompt)
       console.log(result.response.text());
-
-      if((result.response.text())[0]){
+      console.log((result.response.text())[0])
+      if((JSON.parse(result.response.text()))[0]){
+        console.log('seedha seedha agaya')
         setTimeData(JSON.parse(result.response.text()))
+
       }
       else{
           const k=Object.keys(JSON.parse(result.response.text()));
+          console.log('traas:',k);
+          
           setTimeData(JSON.parse(result.response.text())[k[0]]);
           
       }
@@ -251,8 +255,7 @@ main();
       />
     </div>
 
-</>:<>
-loading...</>}
+</>:<></>}
     
     </>
   );
