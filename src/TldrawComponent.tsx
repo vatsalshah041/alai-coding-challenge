@@ -31,7 +31,16 @@ const submitinput=()=>{
       
       let result = await model.generateContent(prompt)
       console.log(result.response.text());
-      setTimeData(JSON.parse(result.response.text()));
+
+      if((result.response.text())[0]){
+        setTimeData(JSON.parse(result.response.text()))
+      }
+      else{
+          const k=Object.keys(JSON.parse(result.response.text()));
+          setTimeData(JSON.parse(result.response.text())[k[0]]);
+          
+      }
+      
       setLoading(true);
 
 }
@@ -136,8 +145,8 @@ main();
               size:"xl",
               spline:'line',
               points: {
-                "start": { id:defaultLineId,index:'a1',x: 10, y: 270 },
-                "end": { id:defaultLineId,index:'a2',x: (timedata.length-1)*400+10, y: 270 }
+                "start": { id:defaultLineId,index:'a1',x: 60, y: 270 },
+                "end": { id:defaultLineId,index:'a2',x:((timedata.length-1)*400)+60, y: 270 }
               }
             },
           });
@@ -147,7 +156,7 @@ main();
             editor.createShape({
               id: createShapeId(),
               type: 'line',
-              x: 10+index*400, // X coordinate of the start point
+              x: 60+index*400, // X coordinate of the start point
               y: 270, 
               props: {
                 color:"red",
@@ -179,6 +188,20 @@ main();
                   text: data.event_name,
                 },
               });
+              editor.createShape({
+                id: createShapeId(),
+                type: "line",
+                
+                props: {
+                  color:"blue",
+                  size:"l",
+                  spline:'line',
+                  points: {
+                    "start": { id:defaultLineId,index:'a1',x: 60 + index * 400, y: 270 },
+                    "end": { id:defaultLineId,index:'a2',x: 60 + index * 400, y: 150 }
+                  }
+                },
+              });
             } else {
               editor.createShape({
                 id: createShapeId(),
@@ -200,6 +223,20 @@ main();
                 y: 400,
                 props: {
                   text: data.event_name,
+                },
+              });
+              editor.createShape({
+                id: createShapeId(),
+                type: "line",
+                
+                props: {
+                  color:"blue",
+                  size:"l",
+                  spline:'line',
+                  points: {
+                    "start": { id:defaultLineId,index:'a1',x: 60 + index * 400, y: 270 },
+                    "end": { id:defaultLineId,index:'a2',x: 60 + index * 400, y: 380 }
+                  }
                 },
               });
             }
